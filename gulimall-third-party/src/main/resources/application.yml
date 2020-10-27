@@ -1,0 +1,20 @@
+server:
+  port: 30000
+  servlet:
+    session:
+      timeout: 30m
+
+spring:
+  application:
+    name: gulimall-third-party
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 123.56.166.69:8848
+    alicloud:
+      access-key: LTAI4G74qL8tpdiNxDy3CaNU
+      secret-key: HDSHt9lU0giPOOQoeNW4A51gpbtbBZ
+      oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+        bucket: gulimall-lloyvet
+

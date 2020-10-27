@@ -4,8 +4,10 @@ import com.lloyvet.gulimall.product.entity.BrandEntity;
 import com.lloyvet.gulimall.product.service.BrandService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.FileInputStream;
@@ -17,7 +19,10 @@ public class GulimallProductApplicationTests {
 
     @Autowired
     BrandService brandService;
-
+    @Autowired
+    RedisTemplate redisTemplate;
+    @Autowired
+    RedissonClient redissonClient;
 //    @Autowired
 //    OSSClient ossClient;
     @Test
@@ -40,6 +45,7 @@ public class GulimallProductApplicationTests {
 //        ossClient.putObject("gulimall-lloyvet","bug.jpg",inputStream);
 ////        ossClient.shutdown();
 //        System.out.println("上传完成");
+        System.out.println(redissonClient);
 
     }
 
